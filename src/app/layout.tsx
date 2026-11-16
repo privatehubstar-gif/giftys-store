@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import PageLoader from "@/components/PageLoader";
 import { CartProvider } from "@/lib/cart-context";
 import { WishlistProvider } from "@/lib/wishlist-context";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body className={`${playfair.variable} ${poppins.variable} antialiased`}>
         <CartProvider>
           <WishlistProvider>
+            <PageLoader />
             <Navbar />
             <main className="min-h-screen">{children}</main>
             <Footer />
