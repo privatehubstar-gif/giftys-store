@@ -1,48 +1,72 @@
 import Link from "next/link";
+import { categories } from "@/data/products";
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, LOCATION, WHATSAPP_DISPLAY, whatsappLink } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A0A0A] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-ink text-white/80">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-14 pb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-[#C9A227] rounded-full flex items-center justify-center">
-                <span className="text-[#0A0A0A] font-serif text-lg font-bold">GS</span>
-              </div>
-              <span className="font-serif text-xl">Gifty&apos;s Store</span>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4">
-              Carry Elegance, Always. Premium handbags & fashion accessories for the modern Nigerian woman.
+            <div
+              role="img"
+              aria-label="Gifty's Store"
+              className="mb-5 h-12 bg-gold"
+              style={{
+                aspectRatio: "310 / 86",
+                WebkitMask: "url(/logo-header.svg) left center / contain no-repeat",
+                mask: "url(/logo-header.svg) left center / contain no-repeat",
+              }}
+            />
+            <p className="text-sm leading-relaxed text-white/60 max-w-xs">
+              Handbags &amp; fashion accessories for the modern woman. Carry Elegance, Always.
             </p>
           </div>
+
           <div>
-            <h4 className="font-serif text-lg mb-4 text-[#C9A227]">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="/shop" className="hover:text-white">Shop All</Link></li>
-              <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-              <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+            <h4 className="eyebrow eyebrow-gold mb-5">Shop</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/shop" className="hover:text-white">All products</Link></li>
+              {categories.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/shop?category=${encodeURIComponent(c.name)}`} className="hover:text-white">{c.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
+
           <div>
-            <h4 className="font-serif text-lg mb-4 text-[#C9A227]">Contact</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
-              <li>Lekki, Lagos, Nigeria</li>
-              <li><a href="http://wa.me/2348140138396" className="hover:text-white">+234 814 013 8396</a></li>
-              <li><a href="https://instagram.com/giftys.store" className="hover:text-white">@giftys.store</a></li>
+            <h4 className="eyebrow eyebrow-gold mb-5">Help</h4>
+            <ul className="space-y-3 text-sm">
+              <li><Link href="/about" className="hover:text-white">Our story</Link></li>
+              <li><Link href="/contact#faq" className="hover:text-white">Delivery</Link></li>
+              <li><Link href="/contact#faq" className="hover:text-white">Returns</Link></li>
+              <li><Link href="/contact#faq" className="hover:text-white">Payment options</Link></li>
+              <li><Link href="/contact" className="hover:text-white">Contact us</Link></li>
             </ul>
           </div>
+
           <div>
-            <h4 className="font-serif text-lg mb-4 text-[#C9A227]">We Accept</h4>
-            <div className="flex gap-2 text-xs text-gray-500">
-              <span className="bg-white/10 px-2 py-1 rounded">Paystack</span>
-              <span className="bg-white/10 px-2 py-1 rounded">Transfer</span>
-              <span className="bg-white/10 px-2 py-1 rounded">POD</span>
-            </div>
+            <h4 className="eyebrow eyebrow-gold mb-5">Contact</h4>
+            <ul className="space-y-3 text-sm">
+              <li>{LOCATION}</li>
+              <li>
+                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  WhatsApp: {WHATSAPP_DISPLAY}
+                </a>
+              </li>
+              <li>
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  Instagram: @{INSTAGRAM_HANDLE}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} Gifty&apos;s Store. All rights reserved.
+
+        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/45">
+          <p>© {new Date().getFullYear()} Gifty&apos;s Store. All rights reserved.</p>
+          <p className="tracking-wide">Paystack &nbsp;·&nbsp; Bank transfer &nbsp;·&nbsp; Pay on delivery (Lagos)</p>
         </div>
       </div>
     </footer>
