@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Poppins } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import PageLoader from "@/components/PageLoader";
 import { CartProvider } from "@/lib/cart-context";
 import { WishlistProvider } from "@/lib/wishlist-context";
 
@@ -15,23 +14,23 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const poppins = Poppins({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Gifty's Store | Luxury Handbags & Fashion Accessories in Lekki, Lagos",
+  title: {
+    default: "Gifty's Store | Handbags & Fashion Accessories in Lekki, Lagos",
+    template: "%s | Gifty's Store",
+  },
   description:
-    "Premium handbags and fashion accessories for the modern woman. Carry Elegance, Always. Free delivery in Lekki on orders above ₦100,000.",
-  keywords:
-    "handbags, fashion accessories, Lekki, Lagos, Nigeria, luxury bags, tote bags, clutches, Gifty's Store",
+    "Quality handbags and fashion accessories for the modern woman. Carry Elegance, Always. Free delivery in Lekki on orders above ₦100,000, nationwide delivery available.",
+  keywords: "handbags, fashion accessories, Lekki, Lagos, Nigeria, tote bags, top-handle bags, Gifty's Store",
   openGraph: {
     title: "Gifty's Store | Carry Elegance, Always.",
-    description:
-      "Premium Handbags & Fashion Accessories for the Modern Woman in Lekki, Lagos.",
+    description: "Handbags & fashion accessories for the modern woman. Lekki, Lagos.",
     type: "website",
   },
 };
@@ -43,12 +42,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfair.variable} ${poppins.variable} antialiased`}>
+      <body className={`${playfair.variable} ${inter.variable} antialiased`}>
         <CartProvider>
           <WishlistProvider>
-            <PageLoader />
             <Navbar />
-            <main className="min-h-screen">{children}</main>
+            <main className="min-h-[60vh]">{children}</main>
             <Footer />
             <CartDrawer />
             <WhatsAppButton />
