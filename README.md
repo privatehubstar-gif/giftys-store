@@ -24,7 +24,7 @@ Every spot that needs a photo shows a placeholder naming the photo it expects.
 - Site photos (hero, about, story): `src/data/images.ts`
 - Product and category photos: `src/data/products.ts`
 - Put image files in `public/images/` and reference them as `/images/your-file.jpg`
-- Real products and prices live in `products.ts`. Photos are in `public/images/products/`.
+- Real products and prices live in `products.ts`. Photos are in `public/images/`.
 
 ## Features
 
