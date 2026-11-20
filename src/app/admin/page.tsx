@@ -43,10 +43,9 @@ export default function AdminPage() {
       <div className="max-w-sm mx-auto px-4 py-20">
         <h1 className="font-serif text-2xl mb-6 text-center">Admin Login</h1>
         <form onSubmit={handleLogin} className="space-y-4">
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="w-full border border-gray-200 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#C9A227]" />
-          <button type="submit" className="w-full bg-[#0A0A0A] text-white py-3 text-sm tracking-wider uppercase">Login</button>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="w-full border border-gray-200 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#B8935A]" />
+          <button type="submit" className="w-full bg-[#161412] text-white py-3 text-sm tracking-wider uppercase">Login</button>
         </form>
-        <p className="text-xs text-gray-400 text-center mt-4">Password: giftys2024</p>
       </div>
     );
   }
@@ -55,11 +54,11 @@ export default function AdminPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
       <div className="flex items-center justify-between mb-8">
         <h1 className="font-serif text-3xl">Admin — Products</h1>
-        <button onClick={() => { setEditing(null); setShowForm(true); }} className="bg-[#C9A227] text-[#0A0A0A] px-5 py-2.5 text-sm tracking-wider uppercase font-medium">+ Add Product</button>
+        <button onClick={() => { setEditing(null); setShowForm(true); }} className="bg-[#B8935A] text-[#161412] px-5 py-2.5 text-sm tracking-wider uppercase font-medium">+ Add Product</button>
       </div>
 
       {showForm && (
-        <div className="bg-[#F5F0E8] p-6 rounded-lg mb-8">
+        <div className="bg-[#EFE9DF] p-6 rounded-lg mb-8">
           <h2 className="font-medium mb-4">{editing ? "Edit Product" : "New Product"}</h2>
           <p className="text-sm text-gray-500 mb-4">For a full admin experience, products are currently managed via the code / localStorage. In a real production setup we would connect this to a database or CMS.</p>
           <button onClick={() => setShowForm(false)} className="text-sm text-gray-500 hover:underline">Close</button>
