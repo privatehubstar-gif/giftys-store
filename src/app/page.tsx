@@ -186,7 +186,7 @@ export default function HomePage() {
             <p className="eyebrow mb-4">Our story</p>
             <h2 className="font-display text-3xl sm:text-4xl leading-tight mb-6">Elegance that fits your life and your budget</h2>
             <p className="text-muted leading-relaxed mb-5">
-              Gifty&apos;s Store started in Lekki, Lagos with one mission: to help every woman carry elegance without breaking the bank.
+              Gifty&apos;s Store started in Uyo, Akwa Ibom with one mission: to help every woman carry elegance without breaking the bank.
             </p>
             <p className="text-muted leading-relaxed mb-8">
               We choose quality, stylish handbags and accessories that make you feel confident, classy and seen, and we check every piece for material, stitching and finish before it reaches you.
