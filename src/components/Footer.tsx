@@ -4,21 +4,14 @@ import { INSTAGRAM_HANDLE, INSTAGRAM_URL, LOCATION, WHATSAPP_DISPLAY, whatsappLi
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-white/80">
+    <footer className="bg-footer text-white/80 border-t border-gold/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-14 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div>
-            <div
-              role="img"
-              aria-label="Gifty's Store"
-              className="mb-5 h-12 bg-gold"
-              style={{
-                aspectRatio: "310 / 86",
-                WebkitMask: "url(/logo-header.svg) left center / contain no-repeat",
-                mask: "url(/logo-header.svg) left center / contain no-repeat",
-              }}
-            />
-            <p className="text-sm leading-relaxed text-white/60 max-w-xs">
+            {/* Plain image (gold version of the logo) so it always shows on the dark footer */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-gold.svg" alt="Gifty's Store" width={310} height={86} className="mb-5 h-[60px] w-auto" />
+            <p className="text-sm leading-relaxed text-white/65 max-w-xs">
               Handbags &amp; fashion accessories for the modern woman. Carry Elegance, Always.
             </p>
           </div>
@@ -64,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/45">
+        <div className="mt-12 pt-6 border-t border-gold/25 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/55">
           <p>© {new Date().getFullYear()} Gifty&apos;s Store. All rights reserved.</p>
           <p className="tracking-wide">Paystack &nbsp;·&nbsp; Bank transfer &nbsp;·&nbsp; Pay on delivery (Lagos)</p>
         </div>

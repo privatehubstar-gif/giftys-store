@@ -19,13 +19,13 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-ink text-white/90 text-center text-[11px] sm:text-xs py-2.5 px-4 tracking-[0.12em] uppercase">
+      <div className="bg-topbar text-gold-light text-center text-[11px] sm:text-xs py-2.5 px-4 tracking-[0.12em] uppercase">
         Free delivery in Lekki on orders above ₦100,000 &nbsp;·&nbsp; Nationwide delivery available
       </div>
 
-      <header className="sticky top-0 z-50 bg-ivory/95 backdrop-blur border-b border-line">
+      <header className="sticky top-0 z-50 bg-header backdrop-blur">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-[1fr_auto_1fr] items-center h-16 sm:h-20">
+          <div className="grid grid-cols-[1fr_auto_1fr] items-center h-[76px] sm:h-24">
             {/* Left: menu button (mobile) / links (desktop) */}
             <div className="flex items-center">
               <button
@@ -50,7 +50,7 @@ export default function Navbar() {
             {/* Centre: logo */}
             <Link href="/" aria-label="Gifty's Store home" className="justify-self-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-header.svg" alt="Gifty's Store" className="h-9 sm:h-12 w-auto" />
+              <img src="/logo-header.svg" alt="Gifty's Store" width={310} height={86} className="h-[52px] sm:h-[68px] w-auto" />
             </Link>
 
             {/* Right: links (desktop) + icons */}
@@ -83,14 +83,14 @@ export default function Navbar() {
         </div>
 
         {mobileOpen && (
-          <div className="lg:hidden border-t border-line bg-ivory">
+          <div className="lg:hidden border-t border-gold/30 bg-champagne">
             <nav className="flex flex-col px-4 py-2">
               {links.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
-                  className="py-4 text-sm tracking-[0.14em] uppercase border-b border-line/70 last:border-b-0"
+                  className="py-4 text-sm tracking-[0.14em] uppercase border-b border-gold/25 last:border-b-0"
                 >
                   {l.label}
                 </Link>
