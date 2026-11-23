@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 import { products as initialProducts, Product, formatPrice } from "@/data/products";
 
-const ADMIN_PASSWORD = "giftys2024";
-
 export default function AdminPage() {
   const [authenticated, setAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
+  const [checking, setChecking] = useState(false);
   const [productList, setProductList] = useState<Product[]>([]);
   const [editing, setEditing] = useState<Product | null>(null);
   const [showForm, setShowForm] = useState(false);
@@ -26,10 +26,29 @@ export default function AdminPage() {
     localStorage.setItem("giftys-products", JSON.stringify(list));
   };
 
-  const handleLogin = (e: React.FormEvent) => {
+  // The password is checked on the server (see /api/admin-login), not in the browser.
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === ADMIN_PASSWORD) setAuthenticated(true);
-    else alert("Wrong password");
+    setLoginError("");
+    setChecking(true);
+    try {
+      const res = await fetch("/api/admin-login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+      if (res.ok) {
+        setAuthenticated(true);
+      } else if (res.status === 503) {
+        setLoginError("Admin login is not switched on yet. Add ADMIN_PASSWORD in Vercel, then redeploy.");
+      } else {
+        setLoginError("Wrong password");
+      }
+    } catch {
+      setLoginError("Could not check the password. Please try again.");
+    } finally {
+      setChecking(false);
+    }
   };
 
   const handleDelete = (id: string) => {
@@ -43,8 +62,18 @@ export default function AdminPage() {
       <div className="max-w-sm mx-auto px-4 py-20">
         <h1 className="font-serif text-2xl mb-6 text-center">Admin Login</h1>
         <form onSubmit={handleLogin} className="space-y-4">
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="w-full border border-gray-200 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#B8935A]" />
-          <button type="submit" className="w-full bg-[#161412] text-white py-3 text-sm tracking-wider uppercase">Login</button>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            autoComplete="current-password"
+            className="w-full border border-gray-200 bg-white rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#B8935A]"
+          />
+          {loginError && <p className="text-sm text-red-600" role="alert">{loginError}</p>}
+          <button type="submit" disabled={checking || password.length === 0} className="w-full bg-[#161412] text-white py-3 text-sm tracking-wider uppercase disabled:opacity-50">
+            {checking ? "Checking..." : "Login"}
+          </button>
         </form>
       </div>
     );
