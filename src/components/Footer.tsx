@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { categories } from "@/data/products";
-import { INSTAGRAM_HANDLE, INSTAGRAM_URL, LOCATION, WHATSAPP_DISPLAY, whatsappLink } from "@/lib/site";
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, LOCATION, TIKTOK_HANDLE, TIKTOK_URL, WHATSAPP_DISPLAY, whatsappLink } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -51,6 +51,11 @@ export default function Footer() {
               <li>
                 <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">
                   Instagram: @{INSTAGRAM_HANDLE}
+                </a>
+              </li>
+              <li>
+                <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  TikTok: @{TIKTOK_HANDLE}
                 </a>
               </li>
             </ul>
