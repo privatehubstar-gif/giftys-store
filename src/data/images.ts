@@ -18,8 +18,8 @@ export const siteImages = {
   homeStory: "",
   // Homepage, wide banner above the footer (optional). Landscape 16:9, min 1920 x 1080.
   banner: "",
-  // About page, story photo. Landscape 4:3, min 1600 x 1200.
+  // About page, story photo. Portrait 4:5, min 1000 x 1250.
   aboutStory: "",
-  // About page, the store / the owner (optional). Portrait 4:5.
-  aboutPortrait: "",
+  // About page, "Meet the owner" round photo. Square or portrait, face near the top.
+  aboutPortrait: "/images/owner-gift.jpg",
 };
