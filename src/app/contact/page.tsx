@@ -1,77 +1,87 @@
 "use client";
 
 import { useState } from "react";
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, LOCATION, WHATSAPP_DISPLAY, whatsappLink } from "@/lib/site";
+
+const faqs = [
+  { q: "Delivery", a: "Free in Lekki on orders above ₦100,000. Nationwide delivery available: Lagos ₦2,500, Abuja / Port Harcourt ₦3,500, other states ₦4,500." },
+  { q: "Returns", a: "Contact us within 48 hours of delivery for any issue. Items must be unused with tags." },
+  { q: "Payment", a: "Paystack (card / transfer), bank transfer, or pay on delivery (Lagos only)." },
+];
 
 export default function ContactPage() {
-  const [sent, setSent] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
+  // Opens WhatsApp with the message filled in, so it really reaches the store.
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    const text = `Hello Gifty's Store, my name is ${name}.\n\n${message}\n\nMy number: ${phone}`;
+    window.open(whatsappLink(text), "_blank", "noopener,noreferrer");
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-      <h1 className="font-serif text-4xl mb-4 text-center">Contact Us</h1>
-      <p className="text-center text-gray-500 mb-12">We&apos;d love to hear from you</p>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+      <div className="text-center mb-14">
+        <p className="eyebrow mb-3">Get in touch</p>
+        <h1 className="font-display text-4xl sm:text-5xl mb-4">Contact us</h1>
+        <p className="text-muted">Questions about a bag, an order or delivery? We&apos;d love to help.</p>
+      </div>
 
-      <div className="grid md:grid-cols-2 gap-12">
-        <div className="space-y-8">
-          <div>
-            <h3 className="font-serif text-xl mb-3 text-[#C9A227]">WhatsApp</h3>
-            <a href="http://wa.me/2348140138396" className="text-lg hover:underline">+234 814 013 8396</a>
-          </div>
-          <div>
-            <h3 className="font-serif text-xl mb-3 text-[#C9A227]">Instagram</h3>
-            <a href="https://instagram.com/giftys.store" className="text-lg hover:underline">@giftys.store</a>
-          </div>
-          <div>
-            <h3 className="font-serif text-xl mb-3 text-[#C9A227]">Location</h3>
-            <p className="text-lg">Lekki, Lagos, Nigeria</p>
+      <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+        <div className="space-y-10">
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="border border-line p-6 bg-white">
+              <p className="eyebrow mb-2">WhatsApp</p>
+              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="font-display text-xl hover:text-gold-dark">{WHATSAPP_DISPLAY}</a>
+              <p className="text-xs text-muted mt-2">Fastest way to reach us</p>
+            </div>
+            <div className="border border-line p-6 bg-white">
+              <p className="eyebrow mb-2">Instagram</p>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="font-display text-xl hover:text-gold-dark">@{INSTAGRAM_HANDLE}</a>
+              <p className="text-xs text-muted mt-2">New arrivals and styling</p>
+            </div>
+            <div className="border border-line p-6 bg-white sm:col-span-2">
+              <p className="eyebrow mb-2">Location</p>
+              <p className="font-display text-xl">{LOCATION}</p>
+            </div>
           </div>
 
-          <div className="pt-6 border-t">
-            <h3 className="font-serif text-xl mb-4">FAQ</h3>
-            <div className="space-y-4 text-sm text-gray-600">
-              <div>
-                <p className="font-medium text-[#0A0A0A]">Delivery</p>
-                <p>Free in Lekki on orders above ₦100,000. Nationwide available (Lagos ₦2,500, Abuja/PH ₦3,500, Other states ₦4,500).</p>
-              </div>
-              <div>
-                <p className="font-medium text-[#0A0A0A]">Returns</p>
-                <p>Contact us within 48 hours of delivery for any issues. Items must be unused with tags.</p>
-              </div>
-              <div>
-                <p className="font-medium text-[#0A0A0A]">Payment</p>
-                <p>Paystack (Card/Transfer), Bank Transfer, or Pay on Delivery (Lagos only).</p>
-              </div>
+          <div id="faq" className="scroll-mt-28">
+            <h2 className="font-display text-2xl mb-2">Good to know</h2>
+            <div className="border-t border-line mt-4">
+              {faqs.map((f) => (
+                <details key={f.q} className="border-b border-line group">
+                  <summary className="flex items-center justify-between py-4 text-sm tracking-wide">
+                    {f.q}
+                    <span className="text-lg text-muted group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="pb-5 text-sm text-muted leading-relaxed">{f.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </div>
 
         <div>
-          {sent ? (
-            <div className="bg-[#F5F0E8] p-8 rounded-lg text-center">
-              <p className="text-lg font-medium mb-2">Message sent!</p>
-              <p className="text-gray-600 text-sm">We&apos;ll get back to you shortly via WhatsApp.</p>
+          <h2 className="font-display text-2xl mb-2">Send us a message</h2>
+          <p className="text-sm text-muted mb-6">This opens WhatsApp with your message ready to send.</p>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="c-name" className="block text-xs tracking-[0.14em] uppercase mb-2">Name</label>
+              <input id="c-name" required value={name} onChange={(e) => setName(e.target.value)} className="input" />
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm mb-1.5">Name</label>
-                <input required className="w-full border border-gray-200 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#C9A227]" />
-              </div>
-              <div>
-                <label className="block text-sm mb-1.5">Phone / WhatsApp</label>
-                <input required type="tel" className="w-full border border-gray-200 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#C9A227]" />
-              </div>
-              <div>
-                <label className="block text-sm mb-1.5">Message</label>
-                <textarea required rows={5} className="w-full border border-gray-200 rounded px-4 py-2.5 text-sm focus:outline-none focus:border-[#C9A227]" />
-              </div>
-              <button type="submit" className="w-full bg-[#0A0A0A] text-white py-3.5 text-sm tracking-wider uppercase hover:bg-[#C9A227]">Send Message</button>
-            </form>
-          )}
+            <div>
+              <label htmlFor="c-phone" className="block text-xs tracking-[0.14em] uppercase mb-2">Phone / WhatsApp</label>
+              <input id="c-phone" required type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} className="input" />
+            </div>
+            <div>
+              <label htmlFor="c-msg" className="block text-xs tracking-[0.14em] uppercase mb-2">Message</label>
+              <textarea id="c-msg" required rows={5} value={message} onChange={(e) => setMessage(e.target.value)} className="input" />
+            </div>
+            <button type="submit" className="btn btn-dark w-full">Send on WhatsApp</button>
+          </form>
         </div>
       </div>
     </div>
