@@ -223,7 +223,8 @@ export default function HomePage() {
       {/* WhatsApp CTA */}
       <section className="bg-cta text-white border-t border-gold/40">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
-          <div className="ornament" aria-hidden="true"><i /></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-circle.png" alt="Gifty's Store" width={88} height={88} className="mx-auto mb-6 h-[88px] w-[88px]" />
           <p className="eyebrow eyebrow-gold mb-4">Need help choosing?</p>
           <h2 className="font-display text-3xl sm:text-4xl mb-4">Talk to us on WhatsApp</h2>
           <p className="text-white/70 mb-9 max-w-md mx-auto">

@@ -22,15 +22,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Gifty's Store | Handbags & Fashion Accessories in Lekki, Lagos",
+    default: "Gifty's Store | Handbags & Fashion Accessories in Uyo & Lagos",
     template: "%s | Gifty's Store",
   },
   description:
     "Quality handbags and fashion accessories for the modern woman. Carry Elegance, Always. Free delivery in Lekki on orders above ₦100,000, nationwide delivery available.",
-  keywords: "handbags, fashion accessories, Lekki, Lagos, Nigeria, tote bags, top-handle bags, Gifty's Store",
+  keywords: "handbags, fashion accessories, Uyo, Akwa Ibom, Lagos, Lekki, Nigeria, tote bags, top-handle bags, Gifty's Store",
   openGraph: {
     title: "Gifty's Store | Carry Elegance, Always.",
-    description: "Handbags & fashion accessories for the modern woman. Lekki, Lagos.",
+    description: "Handbags & fashion accessories for the modern woman. Uyo & Lagos.",
     type: "website",
   },
 };
