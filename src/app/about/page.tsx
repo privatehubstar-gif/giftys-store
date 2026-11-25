@@ -90,7 +90,8 @@ export default function AboutPage() {
 
       <section className="bg-cta text-white border-t border-gold/40">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 py-16 text-center">
-          <div className="ornament" aria-hidden="true"><i /></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-circle.png" alt="Gifty's Store" width={88} height={88} className="mx-auto mb-6 h-[88px] w-[88px]" />
           <p className="text-white/70 text-sm mb-2">Based in {LOCATION}</p>
           <h2 className="font-display text-3xl mb-8">Come say hello</h2>
           <a href={whatsappLink("Hello Gifty's Store!")} target="_blank" rel="noopener noreferrer" className="btn btn-gold">Chat with us on WhatsApp</a>
