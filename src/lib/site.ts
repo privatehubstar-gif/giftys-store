@@ -6,7 +6,7 @@ export const INSTAGRAM_HANDLE = "GIFTSAM002";
 export const INSTAGRAM_URL = "https://instagram.com/giftsam002";
 export const TIKTOK_HANDLE = "giftsa8";
 export const TIKTOK_URL = "https://www.tiktok.com/@giftsa8";
-export const LOCATION = "Lekki, Lagos, Nigeria";
+export const LOCATION = "Uyo, Akwa Ibom and Lagos, Nigeria";
 
 export function whatsappLink(message?: string): string {
   const base = `https://wa.me/${WHATSAPP_NUMBER}`;
