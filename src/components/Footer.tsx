@@ -8,9 +8,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-14 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           <div>
-            {/* Plain image (gold version of the logo) so it always shows on the dark footer */}
+            {/* Round brand logo (transparent corners) so it sits cleanly on the dark footer */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-gold.svg" alt="Gifty's Store" width={310} height={86} className="mb-5 h-[60px] w-auto" />
+            <img src="/logo-circle.png" alt="Gifty's Store" width={112} height={112} className="mb-5 h-28 w-28" />
             <p className="text-sm leading-relaxed text-white/65 max-w-xs">
               Handbags &amp; fashion accessories for the modern woman. Carry Elegance, Always.
             </p>
