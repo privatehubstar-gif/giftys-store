@@ -128,9 +128,9 @@ export default function HomePage() {
       <section className="bg-blush-wash py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <SectionHeading eyebrow="Collections" title="Shop by category" />
-          <div className="grid grid-cols-3 gap-3 sm:gap-8 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-8 sm:gap-8 max-w-5xl mx-auto">
             {categories.map((cat) => (
-              <Link key={cat.slug} href={`/shop?category=${encodeURIComponent(cat.name)}`} className="group block">
+              <Link key={cat.slug} href={`/shop?category=${encodeURIComponent(cat.name)}`} className="group block w-[calc(50%-10px)] sm:w-[calc(25%-24px)] lg:w-[calc(20%-26px)]">
                 <div className="ring-frame">
                   <ImageSlot
                     src={cat.image}
@@ -138,7 +138,7 @@ export default function HomePage() {
                     label={cat.name}
                     hint="Category photo, square"
                     className="aspect-square rounded-full"
-                    sizes="(max-width: 768px) 30vw, 16vw"
+                    sizes="(max-width: 640px) 45vw, 20vw"
                   />
                 </div>
                 <p className="mt-4 text-center text-[13px] sm:text-sm tracking-wide group-hover:text-gold-dark transition-colors">{cat.name}</p>
