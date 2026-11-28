@@ -16,8 +16,6 @@ export default function CheckoutPage() {
   const [form, setForm] = useState({ name: "", phone: "", address: "", area: "", notes: "", payment: paymentOptions[0] });
   const update = (k: keyof typeof form, v: string) => setForm((f) => ({ ...f, [k]: v }));
 
-  const freeDelivery = totalPrice >= 100000;
-
   // The order is sent to the store on WhatsApp, where it is confirmed and payment is arranged.
   const handlePlaceOrder = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,7 +28,7 @@ export default function CheckoutPage() {
       ...lines,
       "",
       `Subtotal: ${formatPrice(totalPrice)}`,
-      `Delivery: ${freeDelivery ? "Free (Lekki)" : "to be confirmed"}`,
+      "Delivery: to be confirmed",
       "",
       `Name: ${form.name}`,
       `Phone: ${form.phone}`,
@@ -86,7 +84,7 @@ export default function CheckoutPage() {
               <input required placeholder="Full name" value={form.name} onChange={(e) => update("name", e.target.value)} className="input" />
               <input required type="tel" placeholder="WhatsApp number" value={form.phone} onChange={(e) => update("phone", e.target.value)} className="input" />
               <input required placeholder="Delivery address" value={form.address} onChange={(e) => update("address", e.target.value)} className="input" />
-              <input placeholder="City / area (e.g. Lekki Phase 1)" value={form.area} onChange={(e) => update("area", e.target.value)} className="input" />
+              <input placeholder="City / area (e.g. Uyo, Lekki)" value={form.area} onChange={(e) => update("area", e.target.value)} className="input" />
               <textarea placeholder="Notes (optional)" rows={2} value={form.notes} onChange={(e) => update("notes", e.target.value)} className="input" />
             </div>
           </div>
@@ -96,7 +94,7 @@ export default function CheckoutPage() {
             <div className="space-y-2">
               {paymentOptions.map((o) => (
                 <label key={o} className={`flex items-center gap-3 p-4 border cursor-pointer text-sm transition-colors ${form.payment === o ? "border-ink bg-white" : "border-line"}`}>
-                  <input type="radio" name="payment" checked={form.payment === o} onChange={() => update("payment", o)} className="accent-[#161412]" />
+                  <input type="radio" name="payment" checked={form.payment === o} onChange={() => update("payment", o)} className="accent-[#a3224f]" />
                   {o}
                 </label>
               ))}
@@ -122,10 +120,9 @@ export default function CheckoutPage() {
               <div className="flex justify-between"><span className="text-muted">Subtotal</span><span>{formatPrice(totalPrice)}</span></div>
               <div className="flex justify-between">
                 <span className="text-muted">Delivery</span>
-                <span>{freeDelivery ? "Free in Lekki" : "Confirmed on WhatsApp"}</span>
+                <span>Confirmed on WhatsApp</span>
               </div>
-              {!freeDelivery && <p className="text-xs text-muted">Lagos from ₦2,500. Free in Lekki on orders above ₦100,000.</p>}
-              <div className="flex justify-between text-base font-medium pt-3 border-t border-ink/10"><span>Total</span><span>{formatPrice(totalPrice)}{freeDelivery ? "" : " + delivery"}</span></div>
+              <div className="flex justify-between text-base font-medium pt-3 border-t border-ink/10"><span>Total</span><span>{formatPrice(totalPrice)} + delivery</span></div>
             </div>
           </div>
         </div>
