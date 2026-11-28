@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Gifty's Store",
   },
   description:
-    "Quality handbags and fashion accessories for the modern woman. Carry Elegance, Always. Free delivery in Lekki on orders above ₦100,000, nationwide delivery available.",
+    "Quality handbags and fashion accessories for the modern woman. Carry Elegance, Always. Order on WhatsApp, with nationwide delivery available.",
   keywords: "handbags, fashion accessories, Uyo, Akwa Ibom, Lagos, Lekki, Nigeria, tote bags, top-handle bags, Gifty's Store",
   openGraph: {
     title: "Gifty's Store | Carry Elegance, Always.",

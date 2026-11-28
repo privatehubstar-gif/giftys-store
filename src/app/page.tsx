@@ -1,12 +1,12 @@
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import ImageSlot from "@/components/ImageSlot";
-import { products, categories } from "@/data/products";
+import { products, categories, formatPrice } from "@/data/products";
 import { siteImages } from "@/data/images";
 import { whatsappLink } from "@/lib/site";
 
 const perks = [
-  { title: "Free delivery in Lekki", text: "On orders above ₦100,000" },
+  { title: `Bags from ${formatPrice(Math.min(...products.map((p) => p.price)))}`, text: "Elegant styles that fit your budget" },
   { title: "Nationwide delivery", text: "Lagos, Abuja, Port Harcourt and beyond" },
   { title: "Quality checked", text: "Every bag inspected before it leaves us" },
   { title: "Easy ordering", text: "Order and pay via WhatsApp or transfer" },
