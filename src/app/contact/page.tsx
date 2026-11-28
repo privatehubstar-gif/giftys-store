@@ -4,7 +4,7 @@ import { useState } from "react";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, LOCATION, WHATSAPP_DISPLAY, whatsappLink } from "@/lib/site";
 
 const faqs = [
-  { q: "Delivery", a: "Free in Lekki on orders above ₦100,000. Nationwide delivery available: Lagos ₦2,500, Abuja / Port Harcourt ₦3,500, other states ₦4,500." },
+  { q: "Delivery", a: "We deliver nationwide. The delivery fee depends on where you are, so message us on WhatsApp with your address and we'll confirm the cost before you pay." },
   { q: "Returns", a: "Contact us within 48 hours of delivery for any issue. Items must be unused with tags." },
   { q: "Payment", a: "Paystack (card / transfer), bank transfer, or pay on delivery (Lagos only)." },
 ];

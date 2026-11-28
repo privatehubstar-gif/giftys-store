@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       <div className="bg-topbar text-gold-light text-center text-[11px] sm:text-xs py-2.5 px-4 tracking-[0.12em] uppercase">
-        Free delivery in Lekki on orders above ₦100,000 &nbsp;·&nbsp; Nationwide delivery available
+        Nationwide delivery available &nbsp;·&nbsp; Order easily on WhatsApp
       </div>
 
       <header className="sticky top-0 z-50 bg-header backdrop-blur">

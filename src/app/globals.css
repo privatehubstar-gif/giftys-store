@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
+/*
+  GIRLY PINK THEME
+  Class names such as "gold" are kept so every page keeps working,
+  but the colours are now rose and cherry instead of gold.
+*/
 @theme static {
-  --color-ink: #161412;
-  --color-gold: #b8935a;
-  --color-gold-dark: #8a6a3b;
-  --color-gold-light: #dcbf8a;
-  --color-ivory: #fbf3e8;
-  --color-sand: #efe3d0;
-  --color-champagne: #f2e2c4;
-  --color-blush: #f8e4dc;
-  --color-wine: #3d1520;
-  --color-line: #e6d9c4;
-  --color-muted: #625a50;
+  --color-ink: #2b1520;
+  --color-gold: #cf5f88;
+  --color-gold-dark: #a3224f;
+  --color-gold-light: #f6bcd0;
+  --color-ivory: #fff4f7;
+  --color-sand: #fbe2ea;
+  --color-champagne: #f9d9e3;
+  --color-blush: #fcdde6;
+  --color-wine: #4a0f27;
+  --color-line: #f1ccd9;
+  --color-muted: #6b5461;
 }
 
 @theme inline {
@@ -19,22 +24,28 @@
   --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
+:root {
+  --pattern-pink: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22 viewBox=%220 0 260 260%22%3E %3Cg transform=%22translate(56 62) rotate(-6) scale(1.0)%22%3E %3Cpath d=%22M0 -16 C-3 -8 -8 -2 -13 4 M0 -16 C3 -8 8 -2 13 4%22 fill=%22none%22 stroke=%22%237a3b4a%22 stroke-opacity=%22.3%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E %3Ccircle cx=%22-13%22 cy=%2212%22 r=%229%22 fill=%22%23b3173f%22 fill-opacity=%22.34%22/%3E%3Ccircle cx=%2213%22 cy=%2212%22 r=%229%22 fill=%22%23b3173f%22 fill-opacity=%22.34%22/%3E %3Ccircle cx=%22-16%22 cy=%228.5%22 r=%222.2%22 fill=%22%23fff%22 fill-opacity=%22.5%22/%3E%3Ccircle cx=%2210%22 cy=%228.5%22 r=%222.2%22 fill=%22%23fff%22 fill-opacity=%22.5%22/%3E%3C/g%3E%3Cg transform=%22translate(188 178) rotate(8) scale(0.9)%22%3E %3Cpath d=%22M0 -16 C-3 -8 -8 -2 -13 4 M0 -16 C3 -8 8 -2 13 4%22 fill=%22none%22 stroke=%22%237a3b4a%22 stroke-opacity=%22.3%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E %3Ccircle cx=%22-13%22 cy=%2212%22 r=%229%22 fill=%22%23b3173f%22 fill-opacity=%22.34%22/%3E%3Ccircle cx=%2213%22 cy=%2212%22 r=%229%22 fill=%22%23b3173f%22 fill-opacity=%22.34%22/%3E %3Ccircle cx=%22-16%22 cy=%228.5%22 r=%222.2%22 fill=%22%23fff%22 fill-opacity=%22.5%22/%3E%3Ccircle cx=%2210%22 cy=%228.5%22 r=%222.2%22 fill=%22%23fff%22 fill-opacity=%22.5%22/%3E%3C/g%3E %3Cg transform=%22translate(205 52) rotate(10) scale(0.9)%22%3E %3Cpath d=%22M0 -4 C3 -14 8 -20 14 -24%22 fill=%22none%22 stroke=%22%237a3b4a%22 stroke-opacity=%22.3%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E %3Ccircle cx=%220%22 cy=%226%22 r=%229%22 fill=%22%23b3173f%22 fill-opacity=%22.34%22/%3E%3Ccircle cx=%22-3%22 cy=%222.5%22 r=%222.2%22 fill=%22%23fff%22 fill-opacity=%22.5%22/%3E%3C/g%3E %3Cg transform=%22translate(128 112) rotate(-8) scale(1.0)%22 fill=%22%23e07a9b%22 fill-opacity=%22.3%22%3E %3Cpath d=%22M0 0 C-8 -9 -20 -10 -22 -2 C-23 5 -12 8 0 0 Z%22/%3E%3Cpath d=%22M0 0 C8 -9 20 -10 22 -2 C23 5 12 8 0 0 Z%22/%3E %3Cpath d=%22M-2 2 L-10 17 L-4 14 L0 18 Z%22/%3E%3Cpath d=%22M2 2 L10 17 L4 14 L0 18 Z%22/%3E%3Ccircle cx=%220%22 cy=%220%22 r=%223.6%22 fill-opacity=%220.5%22/%3E%3C/g%3E%3Cg transform=%22translate(24 140) rotate(14) scale(0.7)%22 fill=%22%23d9577f%22 fill-opacity=%22.26%22%3E %3Cpath d=%22M0 0 C-8 -9 -20 -10 -22 -2 C-23 5 -12 8 0 0 Z%22/%3E%3Cpath d=%22M0 0 C8 -9 20 -10 22 -2 C23 5 12 8 0 0 Z%22/%3E %3Cpath d=%22M-2 2 L-10 17 L-4 14 L0 18 Z%22/%3E%3Cpath d=%22M2 2 L10 17 L4 14 L0 18 Z%22/%3E%3Ccircle cx=%220%22 cy=%220%22 r=%223.6%22 fill-opacity=%220.46%22/%3E%3C/g%3E%3Cg transform=%22translate(232 116) rotate(-10) scale(0.65)%22 fill=%22%23e8a0b8%22 fill-opacity=%22.4%22%3E %3Cpath d=%22M0 0 C-8 -9 -20 -10 -22 -2 C-23 5 -12 8 0 0 Z%22/%3E%3Cpath d=%22M0 0 C8 -9 20 -10 22 -2 C23 5 12 8 0 0 Z%22/%3E %3Cpath d=%22M-2 2 L-10 17 L-4 14 L0 18 Z%22/%3E%3Cpath d=%22M2 2 L10 17 L4 14 L0 18 Z%22/%3E%3Ccircle cx=%220%22 cy=%220%22 r=%223.6%22 fill-opacity=%220.6000000000000001%22/%3E%3C/g%3E%3Cg transform=%22translate(150 232) rotate(6) scale(0.7)%22 fill=%22%23e07a9b%22 fill-opacity=%22.3%22%3E %3Cpath d=%22M0 0 C-8 -9 -20 -10 -22 -2 C-23 5 -12 8 0 0 Z%22/%3E%3Cpath d=%22M0 0 C8 -9 20 -10 22 -2 C23 5 12 8 0 0 Z%22/%3E %3Cpath d=%22M-2 2 L-10 17 L-4 14 L0 18 Z%22/%3E%3Cpath d=%22M2 2 L10 17 L4 14 L0 18 Z%22/%3E%3Ccircle cx=%220%22 cy=%220%22 r=%223.6%22 fill-opacity=%220.5%22/%3E%3C/g%3E %3Cg transform=%22translate(100 168) rotate(-10) scale(0.9)%22%3E%3Cpath d=%22M0 8 C-14 -2 -9 -13 0 -6 C9 -13 14 -2 0 8 Z%22 fill=%22%23f2a1b9%22 fill-opacity=%22.45%22 stroke=%22%23e07a9b%22 stroke-opacity=%22.4%22 stroke-width=%221.5%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate(168 38) rotate(8) scale(0.8)%22%3E%3Cpath d=%22M0 8 C-14 -2 -9 -13 0 -6 C9 -13 14 -2 0 8 Z%22 fill=%22none%22 stroke=%22%23e07a9b%22 stroke-opacity=%22.4%22 stroke-width=%221.5%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate(24 36) rotate(-12) scale(0.7)%22%3E%3Cpath d=%22M0 8 C-14 -2 -9 -13 0 -6 C9 -13 14 -2 0 8 Z%22 fill=%22%23f2a1b9%22 fill-opacity=%22.45%22 stroke=%22%23e07a9b%22 stroke-opacity=%22.4%22 stroke-width=%221.5%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3Cg transform=%22translate(238 214) rotate(10) scale(0.75)%22%3E%3Cpath d=%22M0 8 C-14 -2 -9 -13 0 -6 C9 -13 14 -2 0 8 Z%22 fill=%22none%22 stroke=%22%23e07a9b%22 stroke-opacity=%22.4%22 stroke-width=%221.5%22 stroke-linejoin=%22round%22/%3E%3C/g%3E %3Ccircle cx=%2288%22 cy=%2296%22 r=%224%22 fill=%22%23fff%22 fill-opacity=%22.85%22 stroke=%22%23e8a9bd%22 stroke-opacity=%22.5%22 stroke-width=%22.8%22/%3E%3Ccircle cx=%2286.8%22 cy=%2294.8%22 r=%221.2%22 fill=%22%23fff%22/%3E%3Ccircle cx=%22176%22 cy=%22100%22 r=%223.2%22 fill=%22%23fff%22 fill-opacity=%22.85%22 stroke=%22%23e8a9bd%22 stroke-opacity=%22.5%22 stroke-width=%22.8%22/%3E%3Ccircle cx=%22175.0%22 cy=%2299.0%22 r=%221.0%22 fill=%22%23fff%22/%3E%3Ccircle cx=%2240%22 cy=%22100%22 r=%223%22 fill=%22%23fff%22 fill-opacity=%22.85%22 stroke=%22%23e8a9bd%22 stroke-opacity=%22.5%22 stroke-width=%22.8%22/%3E%3Ccircle cx=%2239.1%22 cy=%2299.1%22 r=%220.9%22 fill=%22%23fff%22/%3E%3Ccircle cx=%22212%22 cy=%22150%22 r=%223.6%22 fill=%22%23fff%22 fill-opacity=%22.85%22 stroke=%22%23e8a9bd%22 stroke-opacity=%22.5%22 stroke-width=%22.8%22/%3E%3Ccircle cx=%22210.9%22 cy=%22148.9%22 r=%221.1%22 fill=%22%23fff%22/%3E%3Ccircle cx=%22130%22 cy=%22190%22 r=%223%22 fill=%22%23fff%22 fill-opacity=%22.85%22 stroke=%22%23e8a9bd%22 stroke-opacity=%22.5%22 stroke-width=%22.8%22/%3E%3Ccircle cx=%22129.1%22 cy=%22189.1%22 r=%220.9%22 fill=%22%23fff%22/%3E%3Ccircle cx=%2214%22 cy=%22214%22 r=%224%22 fill=%22%23fff%22 fill-opacity=%22.85%22 stroke=%22%23e8a9bd%22 stroke-opacity=%22.5%22 stroke-width=%22.8%22/%3E%3Ccircle cx=%2212.8%22 cy=%22212.8%22 r=%221.2%22 fill=%22%23fff%22/%3E%3Ccircle cx=%22238%22 cy=%2220%22 r=%223.4%22 fill=%22%23fff%22 fill-opacity=%22.85%22 stroke=%22%23e8a9bd%22 stroke-opacity=%22.5%22 stroke-width=%22.8%22/%3E%3Ccircle cx=%22237.0%22 cy=%2219.0%22 r=%221.0%22 fill=%22%23fff%22/%3E%3Ccircle cx=%22122%22 cy=%2266%22 r=%222.6%22 fill=%22%23fff%22 fill-opacity=%22.85%22 stroke=%22%23e8a9bd%22 stroke-opacity=%22.5%22 stroke-width=%22.8%22/%3E%3Ccircle cx=%22121.2%22 cy=%2265.2%22 r=%220.8%22 fill=%22%23fff%22/%3E %3Cpath transform=%22translate(36 12) scale(0.9)%22 d=%22M0 -8 L1.8 -1.8 L8 0 L1.8 1.8 L0 8 L-1.8 1.8 L-8 0 L-1.8 -1.8 Z%22 fill=%22%23fff%22 fill-opacity=%22.9%22/%3E%3Cpath transform=%22translate(150 140) scale(0.8)%22 d=%22M0 -8 L1.8 -1.8 L8 0 L1.8 1.8 L0 8 L-1.8 1.8 L-8 0 L-1.8 -1.8 Z%22 fill=%22%23fff%22 fill-opacity=%22.9%22/%3E%3Cpath transform=%22translate(100 140) scale(0.6)%22 d=%22M0 -8 L1.8 -1.8 L8 0 L1.8 1.8 L0 8 L-1.8 1.8 L-8 0 L-1.8 -1.8 Z%22 fill=%22%23fff%22 fill-opacity=%22.9%22/%3E%3Cpath transform=%22translate(222 84) scale(1)%22 d=%22M0 -8 L1.8 -1.8 L8 0 L1.8 1.8 L0 8 L-1.8 1.8 L-8 0 L-1.8 -1.8 Z%22 fill=%22%23fff%22 fill-opacity=%22.9%22/%3E%3Cpath transform=%22translate(80 238) scale(0.8)%22 d=%22M0 -8 L1.8 -1.8 L8 0 L1.8 1.8 L0 8 L-1.8 1.8 L-8 0 L-1.8 -1.8 Z%22 fill=%22%23fff%22 fill-opacity=%22.9%22/%3E%3Cpath transform=%22translate(196 236) scale(0.6)%22 d=%22M0 -8 L1.8 -1.8 L8 0 L1.8 1.8 L0 8 L-1.8 1.8 L-8 0 L-1.8 -1.8 Z%22 fill=%22%23fff%22 fill-opacity=%22.9%22/%3E%3Cpath transform=%22translate(14 176) scale(0.7)%22 d=%22M0 -8 L1.8 -1.8 L8 0 L1.8 1.8 L0 8 L-1.8 1.8 L-8 0 L-1.8 -1.8 Z%22 fill=%22%23fff%22 fill-opacity=%22.9%22/%3E%3Cpath transform=%22translate(170 72) scale(0.6)%22 d=%22M0 -8 L1.8 -1.8 L8 0 L1.8 1.8 L0 8 L-1.8 1.8 L-8 0 L-1.8 -1.8 Z%22 fill=%22%23fff%22 fill-opacity=%22.9%22/%3E %3C/svg%3E");
+  --pattern-dark: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22 viewBox=%220 0 120 120%22%3E %3Cpath transform=%22translate(30 30)%22 d=%22M0 7 C-12 -2 -8 -11 0 -5 C8 -11 12 -2 0 7 Z%22 fill=%22none%22 stroke=%22%23ffc2d4%22 stroke-opacity=%22.16%22 stroke-width=%221.2%22/%3E %3Ccircle cx=%2288%22 cy=%2240%22 r=%222.4%22 fill=%22%23ffd9e4%22 fill-opacity=%22.16%22/%3E%3Ccircle cx=%2252%22 cy=%2292%22 r=%222.4%22 fill=%22%23ffd9e4%22 fill-opacity=%22.14%22/%3E %3Cpath transform=%22translate(96 96)%22 d=%22M0 -6 L1.4 -1.4 L6 0 L1.4 1.4 L0 6 L-1.4 1.4 L-6 0 L-1.4 -1.4 Z%22 fill=%22%23ffd9e4%22 fill-opacity=%22.2%22/%3E %3Cpath transform=%22translate(14 100)%22 d=%22M0 -5 L1.2 -1.2 L5 0 L1.2 1.2 L0 5 L-1.2 1.2 L-5 0 L-1.2 -1.2 Z%22 fill=%22%23ffd9e4%22 fill-opacity=%22.16%22/%3E%3C/svg%3E");
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 /*
-  Page background: a warm cream base with soft gold and rose glows.
-  The glow set repeats every 1400px so long pages never look flat or plain white.
+  Page background: soft pink with a pattern of cherries, bows, hearts and pearls.
+  The pattern is very light so text and product photos stay easy to read.
 */
 body {
-  background-color: #fbf1e3;
+  background-color: #fde6ed;
   background-image:
-    radial-gradient(560px 420px at 12% 22%, rgba(217, 178, 106, 0.34), transparent 62%),
-    radial-gradient(560px 420px at 88% 50%, rgba(232, 160, 150, 0.30), transparent 62%),
-    radial-gradient(520px 380px at 20% 80%, rgba(217, 178, 106, 0.26), transparent 62%);
-  background-size: 100% 1400px;
-  background-repeat: repeat-y;
+    var(--pattern-pink),
+    radial-gradient(620px 460px at 10% 18%, rgba(255, 255, 255, 0.65), transparent 65%),
+    radial-gradient(620px 460px at 90% 55%, rgba(246, 170, 195, 0.35), transparent 65%),
+    radial-gradient(560px 420px at 15% 85%, rgba(255, 255, 255, 0.5), transparent 65%);
+  background-size: 260px 260px, 100% 1400px, 100% 1400px, 100% 1400px;
+  background-repeat: repeat, repeat-y, repeat-y, repeat-y;
   color: var(--color-ink);
   font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -67,30 +78,32 @@ h1, h2, h3, h4 {
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  border-radius: 9999px;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
 }
 .btn-dark {
-  background: var(--color-ink);
+  background: var(--color-gold-dark);
   color: #fff;
 }
 .btn-dark:hover {
-  background: var(--color-gold-dark);
+  background: var(--color-wine);
 }
 .btn-outline {
-  border: 1px solid var(--color-ink);
-  color: var(--color-ink);
+  border: 1px solid var(--color-gold-dark);
+  color: var(--color-gold-dark);
+  background: rgba(255, 255, 255, 0.55);
 }
 .btn-outline:hover {
-  background: var(--color-ink);
+  background: var(--color-gold-dark);
   color: #fff;
 }
 .btn-gold {
-  background: var(--color-gold);
-  color: #fff;
+  background: #fff;
+  color: var(--color-gold-dark);
 }
 .btn-gold:hover {
-  background: var(--color-gold-dark);
+  background: var(--color-gold-light);
 }
 .btn[disabled] {
   opacity: 0.45;
@@ -109,12 +122,13 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 .eyebrow-gold {
-  color: var(--color-gold);
+  color: var(--color-gold-light);
 }
 
 .input {
   width: 100%;
   border: 1px solid var(--color-line);
+  border-radius: 0.75rem;
   background: #fff;
   padding: 0.8rem 1rem;
   font-size: 0.9rem;
@@ -150,54 +164,62 @@ details > summary::-webkit-details-marker {
 
 /* Header and mobile menu */
 .bg-header {
-  background: linear-gradient(180deg, rgba(255, 250, 241, 0.97), rgba(249, 235, 214, 0.95));
-  box-shadow: 0 1px 0 rgba(184, 147, 90, 0.45);
+  background: linear-gradient(180deg, rgba(255, 249, 251, 0.97), rgba(253, 232, 239, 0.96));
+  box-shadow: 0 1px 0 rgba(207, 95, 136, 0.35);
 }
 .bg-topbar {
-  background: linear-gradient(90deg, #161412, #3d1520 50%, #161412);
+  background: linear-gradient(90deg, #7a1a3e, #a3224f 50%, #7a1a3e);
 }
 
-/* Hero: champagne to blush, with a soft white glow and a faint diamond pattern */
+/* Hero: blush pink with a white glow and the cherry-and-bow pattern */
 .bg-hero {
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 5l23 23-23 23L5 28z' fill='none' stroke='%23b8935a' stroke-opacity='.18' stroke-width='1'/%3E%3Ccircle cx='28' cy='28' r='1.7' fill='%23b8935a' fill-opacity='.25'/%3E%3C/svg%3E"),
-    radial-gradient(620px 480px at 82% 22%, rgba(255, 255, 255, 0.6), transparent 65%),
-    radial-gradient(720px 520px at 0% 100%, rgba(214, 140, 128, 0.32), transparent 65%),
-    linear-gradient(135deg, #f7e5bd 0%, #f5dcc4 48%, #f6d7d0 100%);
+    linear-gradient(rgba(255, 248, 250, 0.42), rgba(255, 248, 250, 0.42)),
+    var(--pattern-pink),
+    radial-gradient(620px 480px at 82% 22%, rgba(255, 255, 255, 0.7), transparent 65%),
+    radial-gradient(720px 520px at 0% 100%, rgba(240, 140, 172, 0.35), transparent 65%),
+    linear-gradient(135deg, #ffeef3 0%, #fcdce6 55%, #f9cbda 100%);
+  background-size: auto, 260px 260px, auto, auto, auto;
 }
 
-/* Dark gold-and-wine band used for the perks strip */
+/* Cherry band used for the perks strip */
 .bg-perks {
-  background: linear-gradient(90deg, #161412 0%, #2e1a18 50%, #161412 100%);
+  background: linear-gradient(90deg, #6e1537 0%, #8f1d47 50%, #6e1537 100%);
 }
 
 /* Soft rose section */
 .bg-blush-wash {
-  background: linear-gradient(180deg, #f9e6de 0%, #f6dacf 100%);
+  background:
+    var(--pattern-pink),
+    linear-gradient(180deg, #fddbe5 0%, #f9c9d8 100%);
+  background-size: 260px 260px, auto;
 }
 
-/* Champagne section */
+/* Pale pink-white section */
 .bg-champagne-wash {
   background:
-    radial-gradient(560px 420px at 90% 10%, rgba(255, 255, 255, 0.55), transparent 65%),
-    linear-gradient(135deg, #f5e4c2 0%, #ecd2a2 100%);
+    linear-gradient(rgba(255, 248, 250, 0.35), rgba(255, 248, 250, 0.35)),
+    var(--pattern-pink),
+    radial-gradient(560px 420px at 90% 10%, rgba(255, 255, 255, 0.8), transparent 65%),
+    linear-gradient(135deg, #fff1f5 0%, #fbd9e4 100%);
+  background-size: auto, 260px 260px, auto, auto;
 }
 
-/* Dark call-to-action and footer */
+/* Deep cherry call-to-action and footer */
 .bg-cta,
 .bg-footer {
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 5l23 23-23 23L5 28z' fill='none' stroke='%23dcbf8a' stroke-opacity='.10' stroke-width='1'/%3E%3C/svg%3E"),
-    radial-gradient(620px 320px at 50% 0%, rgba(184, 147, 90, 0.38), transparent 70%),
-    linear-gradient(160deg, #161412 0%, #3d1520 100%);
+    var(--pattern-dark),
+    radial-gradient(620px 320px at 50% 0%, rgba(240, 120, 160, 0.42), transparent 70%),
+    linear-gradient(160deg, #5a1230 0%, #8f1d47 100%);
 }
 .bg-footer {
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cpath d='M28 5l23 23-23 23L5 28z' fill='none' stroke='%23dcbf8a' stroke-opacity='.07' stroke-width='1'/%3E%3C/svg%3E"),
-    linear-gradient(165deg, #161412 0%, #26140f 60%, #3d1520 100%);
+    var(--pattern-dark),
+    linear-gradient(165deg, #4a0f27 0%, #5f1634 60%, #7a1a3e 100%);
 }
 
-/* Gold line with a diamond in the middle, placed above section headings */
+/* Pink line with a diamond in the middle, placed above section headings */
 .ornament {
   display: flex;
   align-items: center;
@@ -224,12 +246,12 @@ details > summary::-webkit-details-marker {
   background: currentColor;
 }
 
-/* Thin gold frame around round category photos */
+/* Thin rose frame around round category photos */
 .ring-frame {
   padding: 6px;
   border-radius: 9999px;
-  border: 1px solid rgba(184, 147, 90, 0.7);
-  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(207, 95, 136, 0.7);
+  background: rgba(255, 255, 255, 0.6);
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 .group:hover .ring-frame {
