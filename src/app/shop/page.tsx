@@ -12,7 +12,7 @@ const priceOptions = [
   { value: "60+", label: "₦60k and above" },
 ];
 
-const colors = ["Black", "Beige", "Brown", "Gold", "Ivory", "Tan", "Camel"];
+const colors = ["Black", "Beige", "Brown", "Gold", "Silver", "Rose Gold", "Red", "Ivory", "Tan", "Camel"];
 
 function ShopContent() {
   const searchParams = useSearchParams();
